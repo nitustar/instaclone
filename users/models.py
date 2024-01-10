@@ -16,6 +16,7 @@ class User(models.Model):
     name = models.CharField(max_length=255, null=False)
     email = models.EmailField(max_length=255, null=False, unique=True)
     phone_number = models.CharField(max_length=10, unique=True)
+    password = models.CharField(max_length=55, null=False)
     is_active = models.BooleanField(default=False)
 
     created_on = models.DateTimeField(auto_now_add=True)

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h1>Hello World!</h1>
+        <h3>I am in the index file!</h3>
+        <p>Number of use in your DB is {{ user_count }}</p>
+
+        {% if user_count < 10 %}
+            <p>You need more people to sign up... </p>
+        {% else %}
+            <p>Great going!</p>
+        {% endif %}
+
+        <ul>
+        {% for user in users %}
+            <li>
+            {{ user.name }} -- {{ user.created_on }}
+            </li>
+        {%  endfor %}
+        </ul>
+
+    </div>
+
+</body>
+</html>
